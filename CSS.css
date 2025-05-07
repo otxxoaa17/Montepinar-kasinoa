@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora:wght@400;600&display=swap');
+
+/* Global styles */
+
+/* Global styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 400px;
+        background-color: white;
+        position: relative;
+      }
+      
+      .nav-left,
+      .nav-right {
+        display: flex;
+        gap: 10000px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .nav-left a,
+      .nav-right a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+      
+      .logo-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .logo-center img {
+        height: 100px; 
+      }
+}
+
+header {
+    position: relative;
+    background-image: url('https://viajaramonaco.es/wp-content/uploads/2016/10/El-Gran-Casino-de-Montecarlo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 6px solid #cfa75c;
+    font-family: 'Cormorant Garamond', serif;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: #111;
+    padding: 14px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Lora', serif;
+}
+
+nav ul li a:hover {
+    background-color: #cfa75c;
+    color: #111;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-family: 'Lora', serif;
+}
+.container-welcome {
+    background-color: #f3e5f5; /* Lila pastel */
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeInSection 1.5s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 30px auto;
+    max-width: 900px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    animation: slideInTop 1s ease;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: #4a148c;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: slideInBottom 1.2s ease;
+  }
+  
+  /* Animazioak */
+  @keyframes fadeInSection {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes slideInTop {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInBottom {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .casinos-section {
+    background-color: #e0f2f1; /* Verde menta claro */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 40px auto;
+    max-width: 1000px;
+    animation: fadeInSection 1.4s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  }
+  
+  .casinos-section .section-title {
+    font-size: 2.3rem;
+    color: #004d40;
+    margin-bottom: 15px;
+    animation: slideInTop 1s ease-in;
+  }
+  
+  .casinos-section .section-description {
+    font-size: 1.1rem;
+    color: #00695c;
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    animation: slideInBottom 1.2s ease-in;
+  }
+  
+  .game-card {
+    background-color: #b2dfdb;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out both;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  .game-card h3 {
+    color: #00796b;
+    margin-bottom: 8px;
+  }
+  
+  .game-card p {
+    color: #004d40;
+    margin: 0;
+  }
+  
+  /* Animazioak */
+  @keyframes fadeInSection {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes slideInTop {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInBottom {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .mapa-kasinoak {
+    background-color: #fce4ec;
+    padding: 50px 20px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeInSection 1.5s ease;
+    margin-top: 40px;
+  }
+  
+  .mapa-container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .mapa-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .map-marker {
+    position: absolute;
+    font-size: 1.8rem;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+/* Styling for individual games */
+.bonuak {
+    background-color: #fff8e1;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    border-top: 2px solid #ffd54f;
+    border-bottom: 2px solid #ffd54f;
+  }
+  
+  .bonua-tit {
+    font-size: 2rem;
+    color: #ff6f00;
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease-out;
+  }
+  
+  .bonua-box {
+    background-color: #ffe082;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bonua-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .bonua-box h3 {
+    color: #bf360c;
+    margin-bottom: 10px;
+  }
+  
+  .bonua-box p {
+    color: #4e342e;
+    margin: 0;
+  }
+  
+  /* Animazioak */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+.game-card {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.game-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    margin-top: 15px;
+}
+
+.highlight {
+    color: #d4af37;
+}
+
+/* 🎯 RULETA Interaktiboa */
+.ruleta-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 12px solid #333;
+    margin: 0 auto;
+    overflow: hidden;
+    background: conic-gradient(
+        red 0deg 90deg,
+        black 90deg 180deg,
+        red 180deg 270deg,
+        black 270deg 360deg
+    );
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ruleta-button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    background-color: #b68e3e;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    transition: background-color 0.3s;
+}
+
+.ruleta-button:hover {
+    background-color: #8a6a2f;
+}
+
+/* 📧 KONTAKTUA */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Lora', serif;
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
